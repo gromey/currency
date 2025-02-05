@@ -40,7 +40,6 @@ const (
 	COP, _170 Currency = "COP", "170" // Colombian Peso
 	COU, _970 Currency = "COU", "970" // Unidad de Valor Real
 	CRC, _188 Currency = "CRC", "188" // Costa Rican Colon
-	CUC, _931 Currency = "CUC", "931" // Peso Convertible
 	CUP, _192 Currency = "CUP", "192" // Cuban Peso
 	CVE, _132 Currency = "CVE", "132" // Cabo Verde Escudo
 	CZK, _203 Currency = "CZK", "203" // Czech Koruna
