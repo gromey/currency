@@ -7,7 +7,6 @@ const (
 	AFN, _971 Currency = "AFN", "971" // Afghani
 	ALL, _008 Currency = "ALL", "008" // Lek
 	AMD, _051 Currency = "AMD", "051" // Armenian Dram
-	ANG, _532 Currency = "ANG", "532" // Netherlands Antillean Guilder
 	AOA, _973 Currency = "AOA", "973" // Kwanza
 	ARS, _032 Currency = "ARS", "032" // Argentine Peso
 	AUD, _036 Currency = "AUD", "036" // Australian Dollar
@@ -168,6 +167,7 @@ const (
 	XBC, _957 Currency = "XBC", "957" // Bond Markets Unit European Unit of Account 9 (E.U.A.-9)
 	XBD, _958 Currency = "XBD", "958" // Bond Markets Unit European Unit of Account 17 (E.U.A.-17)
 	XCD, _951 Currency = "XCD", "951" // East Caribbean Dollar
+	XCG, _532 Currency = "XCG", "532" // Caribbean Guilder
 	XDR, _960 Currency = "XDR", "960" // SDR (Special Drawing Right)
 	XOF, _952 Currency = "XOF", "952" // CFA Franc BCEAO
 	XPD, _964 Currency = "XPD", "964" // Palladium
