@@ -14,7 +14,6 @@ var (
 	afn = currency{alphabetic: "AFN", numeric: "971", units: 0x02, name: "Afghani", countries: []string{"AFGHANISTAN"}}
 	all = currency{alphabetic: "ALL", numeric: "008", units: 0x02, name: "Lek", countries: []string{"ALBANIA"}}
 	amd = currency{alphabetic: "AMD", numeric: "051", units: 0x02, name: "Armenian Dram", countries: []string{"ARMENIA"}}
-	ang = currency{alphabetic: "ANG", numeric: "532", units: 0x02, name: "Netherlands Antillean Guilder", countries: []string{"CURAÇAO", "SINT MAARTEN (DUTCH PART)"}}
 	aoa = currency{alphabetic: "AOA", numeric: "973", units: 0x02, name: "Kwanza", countries: []string{"ANGOLA"}}
 	ars = currency{alphabetic: "ARS", numeric: "032", units: 0x02, name: "Argentine Peso", countries: []string{"ARGENTINA"}}
 	aud = currency{alphabetic: "AUD", numeric: "036", units: 0x02, name: "Australian Dollar", countries: []string{"AUSTRALIA", "CHRISTMAS ISLAND", "COCOS (KEELING) ISLANDS (THE)", "HEARD ISLAND AND McDONALD ISLANDS", "KIRIBATI", "NAURU", "NORFOLK ISLAND", "TUVALU"}}
@@ -175,6 +174,7 @@ var (
 	xbc = currency{alphabetic: "XBC", numeric: "957", units: 0xff, name: "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)", countries: []string{"ZZ03_Bond Markets Unit European_EUA-9"}}
 	xbd = currency{alphabetic: "XBD", numeric: "958", units: 0xff, name: "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)", countries: []string{"ZZ04_Bond Markets Unit European_EUA-17"}}
 	xcd = currency{alphabetic: "XCD", numeric: "951", units: 0x02, name: "East Caribbean Dollar", countries: []string{"ANGUILLA", "ANTIGUA AND BARBUDA", "DOMINICA", "GRENADA", "MONTSERRAT", "SAINT KITTS AND NEVIS", "SAINT LUCIA", "SAINT VINCENT AND THE GRENADINES"}}
+	xcg = currency{alphabetic: "XCG", numeric: "532", units: 0x02, name: "Caribbean Guilder", countries: []string{"CURAÇAO", "SINT MAARTEN (DUTCH PART)"}}
 	xdr = currency{alphabetic: "XDR", numeric: "960", units: 0xff, name: "SDR (Special Drawing Right)", countries: []string{"INTERNATIONAL MONETARY FUND (IMF)"}}
 	xof = currency{alphabetic: "XOF", numeric: "952", units: 0x00, name: "CFA Franc BCEAO", countries: []string{"BENIN", "BURKINA FASO", "CÔTE D'IVOIRE", "GUINEA-BISSAU", "MALI", "NIGER (THE)", "SENEGAL", "TOGO"}}
 	xpd = currency{alphabetic: "XPD", numeric: "964", units: 0xff, name: "Palladium", countries: []string{"ZZ09_Palladium"}}
@@ -191,39 +191,39 @@ var (
 )
 
 var currencies = map[Currency]currency{
-	AED: aed, _784: aed, AFN: afn, _971: afn, ALL: all, _008: all, AMD: amd, _051: amd, ANG: ang, _532: ang,
-	AOA: aoa, _973: aoa, ARS: ars, _032: ars, AUD: aud, _036: aud, AWG: awg, _533: awg, AZN: azn, _944: azn,
-	BAM: bam, _977: bam, BBD: bbd, _052: bbd, BDT: bdt, _050: bdt, BGN: bgn, _975: bgn, BHD: bhd, _048: bhd,
-	BIF: bif, _108: bif, BMD: bmd, _060: bmd, BND: bnd, _096: bnd, BOB: bob, _068: bob, BOV: bov, _984: bov,
-	BRL: brl, _986: brl, BSD: bsd, _044: bsd, BTN: btn, _064: btn, BWP: bwp, _072: bwp, BYN: byn, _933: byn,
-	BZD: bzd, _084: bzd, CAD: cad, _124: cad, CDF: cdf, _976: cdf, CHE: che, _947: che, CHF: chf, _756: chf,
-	CHW: chw, _948: chw, CLF: clf, _990: clf, CLP: clp, _152: clp, CNY: cny, _156: cny, COP: cop, _170: cop,
-	COU: cou, _970: cou, CRC: crc, _188: crc, CUP: cup, _192: cup, CVE: cve, _132: cve, CZK: czk, _203: czk,
-	DJF: djf, _262: djf, DKK: dkk, _208: dkk, DOP: dop, _214: dop, DZD: dzd, _012: dzd, EGP: egp, _818: egp,
-	ERN: ern, _232: ern, ETB: etb, _230: etb, EUR: eur, _978: eur, FJD: fjd, _242: fjd, FKP: fkp, _238: fkp,
-	GBP: gbp, _826: gbp, GEL: gel, _981: gel, GHS: ghs, _936: ghs, GIP: gip, _292: gip, GMD: gmd, _270: gmd,
-	GNF: gnf, _324: gnf, GTQ: gtq, _320: gtq, GYD: gyd, _328: gyd, HKD: hkd, _344: hkd, HNL: hnl, _340: hnl,
-	HTG: htg, _332: htg, HUF: huf, _348: huf, IDR: idr, _360: idr, ILS: ils, _376: ils, INR: inr, _356: inr,
-	IQD: iqd, _368: iqd, IRR: irr, _364: irr, ISK: isk, _352: isk, JMD: jmd, _388: jmd, JOD: jod, _400: jod,
-	JPY: jpy, _392: jpy, KES: kes, _404: kes, KGS: kgs, _417: kgs, KHR: khr, _116: khr, KMF: kmf, _174: kmf,
-	KPW: kpw, _408: kpw, KRW: krw, _410: krw, KWD: kwd, _414: kwd, KYD: kyd, _136: kyd, KZT: kzt, _398: kzt,
-	LAK: lak, _418: lak, LBP: lbp, _422: lbp, LKR: lkr, _144: lkr, LRD: lrd, _430: lrd, LSL: lsl, _426: lsl,
-	LYD: lyd, _434: lyd, MAD: mad, _504: mad, MDL: mdl, _498: mdl, MGA: mga, _969: mga, MKD: mkd, _807: mkd,
-	MMK: mmk, _104: mmk, MNT: mnt, _496: mnt, MOP: mop, _446: mop, MRU: mru, _929: mru, MUR: mur, _480: mur,
-	MVR: mvr, _462: mvr, MWK: mwk, _454: mwk, MXN: mxn, _484: mxn, MXV: mxv, _979: mxv, MYR: myr, _458: myr,
-	MZN: mzn, _943: mzn, NAD: nad, _516: nad, NGN: ngn, _566: ngn, NIO: nio, _558: nio, NOK: nok, _578: nok,
-	NPR: npr, _524: npr, NZD: nzd, _554: nzd, OMR: omr, _512: omr, PAB: pab, _590: pab, PEN: pen, _604: pen,
-	PGK: pgk, _598: pgk, PHP: php, _608: php, PKR: pkr, _586: pkr, PLN: pln, _985: pln, PYG: pyg, _600: pyg,
-	QAR: qar, _634: qar, RON: ron, _946: ron, RSD: rsd, _941: rsd, RUB: rub, _643: rub, RWF: rwf, _646: rwf,
-	SAR: sar, _682: sar, SBD: sbd, _090: sbd, SCR: scr, _690: scr, SDG: sdg, _938: sdg, SEK: sek, _752: sek,
-	SGD: sgd, _702: sgd, SHP: shp, _654: shp, SLE: sle, _925: sle, SOS: sos, _706: sos, SRD: srd, _968: srd,
-	SSP: ssp, _728: ssp, STN: stn, _930: stn, SVC: svc, _222: svc, SYP: syp, _760: syp, SZL: szl, _748: szl,
-	THB: thb, _764: thb, TJS: tjs, _972: tjs, TMT: tmt, _934: tmt, TND: tnd, _788: tnd, TOP: top, _776: top,
-	TRY: try, _949: try, TTD: ttd, _780: ttd, TWD: twd, _901: twd, TZS: tzs, _834: tzs, UAH: uah, _980: uah,
-	UGX: ugx, _800: ugx, USD: usd, _840: usd, USN: usn, _997: usn, UYI: uyi, _940: uyi, UYU: uyu, _858: uyu,
-	UYW: uyw, _927: uyw, UZS: uzs, _860: uzs, VED: ved, _926: ved, VES: ves, _928: ves, VND: vnd, _704: vnd,
-	VUV: vuv, _548: vuv, WST: wst, _882: wst, XAF: xaf, _950: xaf, XAG: xag, _961: xag, XAU: xau, _959: xau,
-	XBA: xba, _955: xba, XBB: xbb, _956: xbb, XBC: xbc, _957: xbc, XBD: xbd, _958: xbd, XCD: xcd, _951: xcd,
+	AED: aed, _784: aed, AFN: afn, _971: afn, ALL: all, _008: all, AMD: amd, _051: amd, AOA: aoa, _973: aoa,
+	ARS: ars, _032: ars, AUD: aud, _036: aud, AWG: awg, _533: awg, AZN: azn, _944: azn, BAM: bam, _977: bam,
+	BBD: bbd, _052: bbd, BDT: bdt, _050: bdt, BGN: bgn, _975: bgn, BHD: bhd, _048: bhd, BIF: bif, _108: bif,
+	BMD: bmd, _060: bmd, BND: bnd, _096: bnd, BOB: bob, _068: bob, BOV: bov, _984: bov, BRL: brl, _986: brl,
+	BSD: bsd, _044: bsd, BTN: btn, _064: btn, BWP: bwp, _072: bwp, BYN: byn, _933: byn, BZD: bzd, _084: bzd,
+	CAD: cad, _124: cad, CDF: cdf, _976: cdf, CHE: che, _947: che, CHF: chf, _756: chf, CHW: chw, _948: chw,
+	CLF: clf, _990: clf, CLP: clp, _152: clp, CNY: cny, _156: cny, COP: cop, _170: cop, COU: cou, _970: cou,
+	CRC: crc, _188: crc, CUP: cup, _192: cup, CVE: cve, _132: cve, CZK: czk, _203: czk, DJF: djf, _262: djf,
+	DKK: dkk, _208: dkk, DOP: dop, _214: dop, DZD: dzd, _012: dzd, EGP: egp, _818: egp, ERN: ern, _232: ern,
+	ETB: etb, _230: etb, EUR: eur, _978: eur, FJD: fjd, _242: fjd, FKP: fkp, _238: fkp, GBP: gbp, _826: gbp,
+	GEL: gel, _981: gel, GHS: ghs, _936: ghs, GIP: gip, _292: gip, GMD: gmd, _270: gmd, GNF: gnf, _324: gnf,
+	GTQ: gtq, _320: gtq, GYD: gyd, _328: gyd, HKD: hkd, _344: hkd, HNL: hnl, _340: hnl, HTG: htg, _332: htg,
+	HUF: huf, _348: huf, IDR: idr, _360: idr, ILS: ils, _376: ils, INR: inr, _356: inr, IQD: iqd, _368: iqd,
+	IRR: irr, _364: irr, ISK: isk, _352: isk, JMD: jmd, _388: jmd, JOD: jod, _400: jod, JPY: jpy, _392: jpy,
+	KES: kes, _404: kes, KGS: kgs, _417: kgs, KHR: khr, _116: khr, KMF: kmf, _174: kmf, KPW: kpw, _408: kpw,
+	KRW: krw, _410: krw, KWD: kwd, _414: kwd, KYD: kyd, _136: kyd, KZT: kzt, _398: kzt, LAK: lak, _418: lak,
+	LBP: lbp, _422: lbp, LKR: lkr, _144: lkr, LRD: lrd, _430: lrd, LSL: lsl, _426: lsl, LYD: lyd, _434: lyd,
+	MAD: mad, _504: mad, MDL: mdl, _498: mdl, MGA: mga, _969: mga, MKD: mkd, _807: mkd, MMK: mmk, _104: mmk,
+	MNT: mnt, _496: mnt, MOP: mop, _446: mop, MRU: mru, _929: mru, MUR: mur, _480: mur, MVR: mvr, _462: mvr,
+	MWK: mwk, _454: mwk, MXN: mxn, _484: mxn, MXV: mxv, _979: mxv, MYR: myr, _458: myr, MZN: mzn, _943: mzn,
+	NAD: nad, _516: nad, NGN: ngn, _566: ngn, NIO: nio, _558: nio, NOK: nok, _578: nok, NPR: npr, _524: npr,
+	NZD: nzd, _554: nzd, OMR: omr, _512: omr, PAB: pab, _590: pab, PEN: pen, _604: pen, PGK: pgk, _598: pgk,
+	PHP: php, _608: php, PKR: pkr, _586: pkr, PLN: pln, _985: pln, PYG: pyg, _600: pyg, QAR: qar, _634: qar,
+	RON: ron, _946: ron, RSD: rsd, _941: rsd, RUB: rub, _643: rub, RWF: rwf, _646: rwf, SAR: sar, _682: sar,
+	SBD: sbd, _090: sbd, SCR: scr, _690: scr, SDG: sdg, _938: sdg, SEK: sek, _752: sek, SGD: sgd, _702: sgd,
+	SHP: shp, _654: shp, SLE: sle, _925: sle, SOS: sos, _706: sos, SRD: srd, _968: srd, SSP: ssp, _728: ssp,
+	STN: stn, _930: stn, SVC: svc, _222: svc, SYP: syp, _760: syp, SZL: szl, _748: szl, THB: thb, _764: thb,
+	TJS: tjs, _972: tjs, TMT: tmt, _934: tmt, TND: tnd, _788: tnd, TOP: top, _776: top, TRY: try, _949: try,
+	TTD: ttd, _780: ttd, TWD: twd, _901: twd, TZS: tzs, _834: tzs, UAH: uah, _980: uah, UGX: ugx, _800: ugx,
+	USD: usd, _840: usd, USN: usn, _997: usn, UYI: uyi, _940: uyi, UYU: uyu, _858: uyu, UYW: uyw, _927: uyw,
+	UZS: uzs, _860: uzs, VED: ved, _926: ved, VES: ves, _928: ves, VND: vnd, _704: vnd, VUV: vuv, _548: vuv,
+	WST: wst, _882: wst, XAF: xaf, _950: xaf, XAG: xag, _961: xag, XAU: xau, _959: xau, XBA: xba, _955: xba,
+	XBB: xbb, _956: xbb, XBC: xbc, _957: xbc, XBD: xbd, _958: xbd, XCD: xcd, _951: xcd, XCG: xcg, _532: xcg,
 	XDR: xdr, _960: xdr, XOF: xof, _952: xof, XPD: xpd, _964: xpd, XPF: xpf, _953: xpf, XPT: xpt, _962: xpt,
 	XSU: xsu, _994: xsu, XTS: xts, _963: xts, XUA: xua, _965: xua, XXX: xxx, _999: xxx, YER: yer, _886: yer,
 	ZAR: zar, _710: zar, ZMW: zmw, _967: zmw, ZWG: zwg, _924: zwg,

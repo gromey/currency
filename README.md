@@ -4,7 +4,7 @@
 ![https://img.shields.io/github/license/gromey/currency](https://img.shields.io/github/license/gromey/currency)
 
 `currency` library of currencies based on the [ISO 4217 standard](https://www.iso.org/iso-4217-currency-codes.html)
-published: ***2025-02-04***
+published: ***2025-03-31***
 
 ## Installation
 
