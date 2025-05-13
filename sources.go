@@ -166,6 +166,7 @@ var (
 	vnd = currency{alphabetic: "VND", numeric: "704", units: 0x00, name: "Dong", countries: []string{"VIET NAM"}}
 	vuv = currency{alphabetic: "VUV", numeric: "548", units: 0x00, name: "Vatu", countries: []string{"VANUATU"}}
 	wst = currency{alphabetic: "WST", numeric: "882", units: 0x02, name: "Tala", countries: []string{"SAMOA"}}
+	xad = currency{alphabetic: "XAD", numeric: "396", units: 0x02, name: "Arab Accounting Dinar", countries: []string{"ARAB MONETARY FUND"}}
 	xaf = currency{alphabetic: "XAF", numeric: "950", units: 0x00, name: "CFA Franc BEAC", countries: []string{"CAMEROON", "CENTRAL AFRICAN REPUBLIC (THE)", "CHAD", "CONGO (THE)", "EQUATORIAL GUINEA", "GABON"}}
 	xag = currency{alphabetic: "XAG", numeric: "961", units: 0xff, name: "Silver", countries: []string{"ZZ11_Silver"}}
 	xau = currency{alphabetic: "XAU", numeric: "959", units: 0xff, name: "Gold", countries: []string{"ZZ08_Gold"}}
@@ -222,9 +223,9 @@ var currencies = map[Currency]currency{
 	TTD: ttd, _780: ttd, TWD: twd, _901: twd, TZS: tzs, _834: tzs, UAH: uah, _980: uah, UGX: ugx, _800: ugx,
 	USD: usd, _840: usd, USN: usn, _997: usn, UYI: uyi, _940: uyi, UYU: uyu, _858: uyu, UYW: uyw, _927: uyw,
 	UZS: uzs, _860: uzs, VED: ved, _926: ved, VES: ves, _928: ves, VND: vnd, _704: vnd, VUV: vuv, _548: vuv,
-	WST: wst, _882: wst, XAF: xaf, _950: xaf, XAG: xag, _961: xag, XAU: xau, _959: xau, XBA: xba, _955: xba,
-	XBB: xbb, _956: xbb, XBC: xbc, _957: xbc, XBD: xbd, _958: xbd, XCD: xcd, _951: xcd, XCG: xcg, _532: xcg,
-	XDR: xdr, _960: xdr, XOF: xof, _952: xof, XPD: xpd, _964: xpd, XPF: xpf, _953: xpf, XPT: xpt, _962: xpt,
-	XSU: xsu, _994: xsu, XTS: xts, _963: xts, XUA: xua, _965: xua, XXX: xxx, _999: xxx, YER: yer, _886: yer,
-	ZAR: zar, _710: zar, ZMW: zmw, _967: zmw, ZWG: zwg, _924: zwg,
+	WST: wst, _882: wst, XAD: xad, _396: xad, XAF: xaf, _950: xaf, XAG: xag, _961: xag, XAU: xau, _959: xau,
+	XBA: xba, _955: xba, XBB: xbb, _956: xbb, XBC: xbc, _957: xbc, XBD: xbd, _958: xbd, XCD: xcd, _951: xcd,
+	XCG: xcg, _532: xcg, XDR: xdr, _960: xdr, XOF: xof, _952: xof, XPD: xpd, _964: xpd, XPF: xpf, _953: xpf,
+	XPT: xpt, _962: xpt, XSU: xsu, _994: xsu, XTS: xts, _963: xts, XUA: xua, _965: xua, XXX: xxx, _999: xxx,
+	YER: yer, _886: yer, ZAR: zar, _710: zar, ZMW: zmw, _967: zmw, ZWG: zwg, _924: zwg,
 }

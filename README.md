@@ -1,17 +1,19 @@
-# currency
+# Currency
 
 ![https://img.shields.io/github/v/tag/gromey/currency](https://img.shields.io/github/v/tag/gromey/currency)
 ![https://img.shields.io/github/license/gromey/currency](https://img.shields.io/github/license/gromey/currency)
 
+## Overview
+
 `currency` library of currencies based on the [ISO 4217 standard](https://www.iso.org/iso-4217-currency-codes.html)
-published: ***2025-03-31***
+published: ***2025-05-12***
 
 ## Installation
 
 `currency` can be installed like any other Go library through `go get`:
 
-```console
-go get github.com/gromey/currency@latest
+```sh
+  go get github.com/gromey/currency@latest
 ```
 
 ## Getting Started
@@ -50,9 +52,11 @@ func main() {
 		ccy.AlphabeticCode(), ccy.NumericCode(), ccy.MinorUnits().Int(), ccy.MinorUnits().String(), ccy.Name(), ccy.CountryNames())
 	// Output: AlphabeticCode: ALL, NumericCode: 008, MinorUnits.Int: 2, MinorUnits.String: 2, Name: Lek, CountryNames: [ALBANIA]
 }
+
 ```
 
 ### WARNING!
+
 **To simplify the use of the library, currency methods do not return errors.  
 It is not recommended to create currency manually, like `currency.Currency("usd")`.  
 Use the identify function instead: `currency.Identify("usd")`.**

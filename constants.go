@@ -159,6 +159,7 @@ const (
 	VND, _704 Currency = "VND", "704" // Dong
 	VUV, _548 Currency = "VUV", "548" // Vatu
 	WST, _882 Currency = "WST", "882" // Tala
+	XAD, _396 Currency = "XAD", "396" // Arab Accounting Dinar
 	XAF, _950 Currency = "XAF", "950" // CFA Franc BEAC
 	XAG, _961 Currency = "XAG", "961" // Silver
 	XAU, _959 Currency = "XAU", "959" // Gold
