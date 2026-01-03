@@ -15,7 +15,6 @@ const (
 	BAM, _977 Currency = "BAM", "977" // Convertible Mark
 	BBD, _052 Currency = "BBD", "052" // Barbados Dollar
 	BDT, _050 Currency = "BDT", "050" // Taka
-	BGN, _975 Currency = "BGN", "975" // Bulgarian Lev
 	BHD, _048 Currency = "BHD", "048" // Bahraini Dinar
 	BIF, _108 Currency = "BIF", "108" // Burundi Franc
 	BMD, _060 Currency = "BMD", "060" // Bermudian Dollar
