@@ -6,11 +6,9 @@
 ## Overview
 
 `currency` library of currencies based on the [ISO 4217 standard](https://www.iso.org/iso-4217-currency-codes.html)
-published: ***2025-05-12***
+published: ***2026-01-01***
 
-## Installation
-
-`currency` can be installed like any other Go library through `go get`:
+## 📦 Installation
 
 ```sh
   go get github.com/gromey/currency@latest
