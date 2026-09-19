@@ -6,7 +6,7 @@
 ## Overview
 
 `currency` library of currencies based on the [ISO 4217 standard](https://www.iso.org/iso-4217-currency-codes.html)
-published: ***2026-01-01***
+published: ***2026-09-17***
 
 ## 📦 Installation
 
